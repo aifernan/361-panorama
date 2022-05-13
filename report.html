@@ -1,0 +1,91 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <title>CMPT 361 HW2 - Antonio Fernandez</title>
+    
+    </head> <body>
+    
+    <h2>CMPT 361 - Homework 2</h2>
+    
+    <p>Name: <b>Antonio Fernandez</b></p>
+    <p>Student No: <b>301393610</b></p>
+    <p>Date: Oct. 22, 2021</p>
+    
+    <h4>Honor statement:</h4>
+    <p>I have not cheated in any way when doing this assignment, I did it on my own. 
+        I may have asked questions about the assignment on Piazza, I know that’s totally fine and even encouraged. 
+        I also already know that this class is graded on a curve. 
+        I realize that if I cheat and by some miracle not get caught, any increase in my grade will in turn shift the curve and result in lower grades for my classmates. 
+        Any undeserved extra grade would come at the cost of all others. That’s horrible! I would never do it.</p>
+    
+    <h4>1: Take four photograph pairs or sets of 4.</h4>
+    
+    <img src="S1-im1.png" alt="im1" width="300">
+    <img src="S1-im2.png" alt="im2" width="300">
+    <!--<br><img src="S1-im3.png" alt="im3" width="300">
+    <img src="S1-im4.png" alt="im4" width="300">-->
+    <br><br>
+    <img src="S2-im1.png" alt="im1" width="300">
+    <img src="S2-im2.png" alt="im2" width="300">
+    <!--<br><img src="S2-im3.png" alt="im3" width="300">
+    <img src="S2-im4.png" alt="im4" width="300">-->
+    <br><br>
+    <img src="S3-im1.png" alt="im1" width="300">
+    <img src="S3-im2.png" alt="im2" width="300">
+    <br><img src="S3-im3.png" alt="im3" width="300">
+    <img src="S3-im4.png" alt="im4" width="300">
+    <br><br>
+    <img src="S4-im1.png" alt="im1" width="300">
+    <img src="S4-im2.png" alt="im2" width="300">
+    <br><img src="S4-im3.png" alt="im3" width="300">
+    <img src="S4-im4.png" alt="im4" width="300">
+    <br><br>
+    
+    <h4>2: FAST feature detector</h4>
+    <img src="S1-fast.png" alt="S1-fast" width="300">
+    <img src="S2-fast.png" alt="S2-fast" width="300">
+    
+    <h4>2: FASTR feature detector</h4>
+    <img src="S1-fastR.png" alt="S1-fastR" width="300">
+    <img src="S2-fastR.png" alt="S2-fastR" width="300">
+    
+    <p>My FAST detector picks up many of the points from the same feature. As mentioned in the FAST tutorial, it catches many redundant features. 
+        By filtering them based on Harris cornerness scores, we get rid of the redundant features and keep the key ones, as can be seen in set 1 
+        where most of the features picked up by fast on the whiteboard were thrown away, keeping the actual corners of the letters. 
+        Another benefit is that we get rid of many outliers, as can be seen below in the feature matching. 
+        For performance, my_fast_detector's total time was 5.892s giving an average of 0.74s over 8 calls. 
+        fastr's total time was 4.115s giving and average of 1.04s over 4 calls. So this added robustness cost us about 41% performance.</p>
+    
+    
+    <h4>3: Point description and matching</h4>
+    <img src="S1-fastMatch.png" alt="S1-fastMatch" width="600">
+    <br><br>
+    <img src="S1-fastRMatch.png" alt="S1-fastRMatch" width="600">
+    <br><br>
+    <img src="S2-fastMatch.png" alt="S2-fastMatch" width="600">
+    <br><br>
+    <img src="S2-fastRMatch.png" alt="S2-fastRMatch" width="600">
+    
+    <p>I couldn't get the exact figures since I use the same function for both FAST and FASTR features, but I set it up so it shows the 
+        matches on the figure everytime it gets computed. I can definitely FEEL the difference between the two - it takes a 
+        bit longer for the FAST matches to pop up - and I would assume so because the sample size 
+        is so much bigger when doing FAST points.
+    </p>
+    
+    <h4>4: RANSAC and Panoramas</h4>
+    <img src="S1-panorama.png" alt="S1-panorama" width="600">
+    <br><br>
+    <img src="S2-panorama.png" alt="S2-panorama" width="600">
+    <br><br>
+    <img src="S3-panorama.png" alt="S3-panorama" width="600">
+    <br><br>
+    <img src="S4-panorama.png" alt="S4-panorama" width="600">
+    
+    <p>I actually tried to experiment with the parameters such as increasing the confidence interval for the FAST features,
+        but I found that the default values gave me good results all around.
+        I will mention the imperfections such as the wood on the right side of the SFU panorama and the ceiling pieces on S2
+        , but I will forgive them since they're on the very edge. 
+    </p>
+    
+    
+    </body> </html>
