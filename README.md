@@ -1,1 +1,1 @@
-View report.pdf
+View report.html
